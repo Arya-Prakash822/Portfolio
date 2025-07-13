@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Arya Prakash | Portfolio</title>
+
+  <!-- Styles & Libraries -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Vanta.js for 3D background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav">
+    <a href="#home" class="nav__logo">Arya Prakash</a>
+  <div class="nav__menu" id="nav-menu">
+    <a href="#home" class="nav__link">Home</a>
+    <a href="#about" class="nav__link">About</a>
+    <a href="#projects" class="nav__link">Projects</a>
+    <a href="#contact" class="nav__link">Contact</a>
+    </div>
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="bx bx-menu"></i>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  </nav>
+
+  <!-- Home Section with 3D Vanta Background -->
+  <section id="home" class="home" data-aos="fade-in">
+    <div id="vanta-bg"></div>
+    <div class="home__content">
+      <h1>Hello, I'm <span>Arya Prakash</span></h1>
+      <p id="type-text"></p>
+
+      <div class="btn-group">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/arya-prakash822" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="mailto:your-email@example.com"><i class='bx bx-envelope'></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about" class="about" data-aos="fade-up">
+  <h2 class="section__title">About Me</h2>
+  <div class="about__container">
+    <img src="WhatsApp Image 2025-07-12 at 21.45.54_4cfe3f1a.jpg" alt="Your Photo" class="about__img" data-aos="zoom-in" />
+
+    <div class="about__right">
+      <div class="about__text">
+        <p>I’m a B.Tech student at IIT Patna, majoring in Electrical and Electronics Engineering. I have a strong foundation in electrical systems and hands-on experience in circuit design.</p>
+        <p>I’m also learning coding and practicing Data Structures and Algorithms in C++, which has strengthened my problem-solving skills and logical thinking.</p>
+        <p>In addition, I’m passionate about building interactive websites and enhancing my front-end development skills.</p>
+
+        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn btn-outline" style="margin-top: 1rem; display: inline-block" id="resume-link";>
+          View My Resume
+        </a>
+      </div>
+
+      <ul class="about__highlights">
+        <li>📘 B.Tech @ IIT Patna</li>
+        <li>🔌 Circuit Design & Systems</li>
+        <li>💻 C++ & DSA Practice</li>
+        <li>🌐 Web Dev Enthusiast</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects" data-aos="fade-up">
+    <h2 class="section__title">My Work</h2>
+    <div class="projects__container">
+      <div class="project-card" data-aos="zoom-in">
+        <img src="protfolio.jpg" alt="Portfolio Website" />
+        <h3>Portfolio Website</h3>
+        <p>Responsive web design using HTML, CSS, JS</p>
+        <a href="#" id="demo">View Demo</a>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="developer.png" alt="Landing Page" />
+        <h3>Landing Page</h3>
+        <p>Product landing page using HTML & CSS</p>
+        <a href="https://arya-prakash822.github.io/Developer-Landing-Page/" id="demo">View Demo</a>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="sip-logo-box">
+          <img src="Screenshot 2025-07-12 222035.png" alt="SIP Calculator Logo" />
+        </div>
+        <h3>SIP Calculator</h3>
+        <p>A web-based tool to calculate SIP investment returns using HTML, CSS, & JavaScript.</p>
+        <a href="https://arya-prakash822.github.io/SIP-Calculator/" target="_blank" id="demo">View Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2 class="section__title">Get In Touch</h2>
+    <form class="contact__form" action="https://formspree.io/f/mzzvpzve" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    // Vanta.js init
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      lineColor: 0x4CAF50,
+      backgroundColor: 0x1e1e1e
+    });
+  </script>
+</body>
+</html>
